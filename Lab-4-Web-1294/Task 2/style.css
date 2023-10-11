@@ -1,0 +1,26 @@
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+li{
+    color: blue;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    color: green;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+th{
+    color: orangered;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+td{
+    color: peru;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
