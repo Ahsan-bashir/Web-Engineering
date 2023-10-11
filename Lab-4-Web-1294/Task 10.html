@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Bashir</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+    }
+    p{
+        color: rgb(0, 0, 0);
+    }
+    div{
+        color: rgb(21, 178, 141);
+        
+    }
+    div.AI{
+        color: rgb(255, 0, 0);
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 id="heading">Universal Selector</h1>
+    <p id="sentence">University offers the following courses </p>
+    <ol>
+        <div class="AI"> <li>  Artificial Intelligence</li></div>
+        <div class="BC"> <li>  Block Chain </li></div>
+        <div class="CNC"> <li>  Cloud Native Computing</li></div>
+        <div class="IoT"> <li>  Internet of Things</li></div>
+    </ol>
+    <p>Below is the students list</p>
+    <table border="2" width="80%">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Courses</th>
+        </tr>
+        <tr class="r1">
+            <td>1</td>
+            <td>Ali</td>
+            <td>C001</td>
+            <td>
+                <ol>
+                    <div class="AI"><li><p>Artificial Intelligence</p></li></div>
+                    <div class="BC"><li>Block Chain</li></div>
+                    <div class="CNC"><li>Cloud Native Computing</li></div>
+                    <div class="IoT"><li>Onternet of Things</li></div>
+                </ol>
+            </td>
+        </tr>
+        <tr class="r1">
+            <td>2</td>
+            <td>Anees</td>
+            <td>C002</td>
+            <td>
+                <ol>
+                    <div class="AI"><li>Artificial Intelligence</li></div>
+                    <div class="BC"><li>Onternet of Things</li></div>
+                </ol>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
