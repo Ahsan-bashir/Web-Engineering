@@ -1,13 +1,39 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <style>
+        .nav-items li {
+            padding: 0 20px; /* Adjust the padding as needed */
+        }
+    </style>
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <nav>
+        <div>
+            <ul class="flex bg-slate-400 text text-green-900 w-full h-20 justify-between  ">
+                <li><img src="./img/ricelogo.png" alt="rice Logo " class=" outline-double rounded-xl p-2 w-1/4 "></li>
+                <div class=" flex text-3xl p-4 justify-evenly  nav-items hover:text-sky font-serif">
+                    <li class="hover:text-yellow-700 cursor-pointer hover:underline">Home</li>
+                    <li class="hover:text-yellow-700 cursor-pointer hover:underline">Products Catalog</li>
+                    <li class="hover:text-yellow-700 cursor-pointer hover:underline">Quality</li>
+                    <li class="hover:text-yellow-700 cursor-pointer hover:underline">Brands & Packaging</li>
+                    <li class="hover:text-yellow-700 cursor-pointer hover:underline">About Us</li>
+                </div>
+                <li class="text-3xl m-4 p-2 text-purple-950 outline-dashed rounded-xl hover:text-yellow-400 cursor-pointer">Portfolio</li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="bg-yellow-500">
+    <main>
+        <div class="">
+            <img src="./img/bd-rice.jpg " class="w-full h-auto" alt="">
+        </div>
+    </main>
 </body>
+
 </html>
