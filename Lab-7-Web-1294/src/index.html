@@ -1,13 +1,38 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-NTU-CS-1294</title>
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+    <div class="container  my-48 mx-auto flex">
+        <!-- Left Div -->
+        <div class="left w-1/2   ">
+            <img class="w-full" src="./img/facebooklogo.svg" alt="facebook_Logo">
+            <p class="text-left pl-10 ml-7 mt-12">Facebook help you to connect with people and share their knowledge
+                with each other</p>
+        </div>
+
+        <!-- Right Div -->
+        <div class="right flex flex-col w-2/6 rounded-xl p-3 bg-white">
+            <input class="border border-1 border-gray-300 rounded-lg p-4 m-2" type="email"
+                placeholder="email address or phone number">
+            <input class="border border-1 border-gray-300 rounded-lg p-4 m-2" type="password"
+                placeholder="Enter the password">
+            <button class="bg-blue-600 text-white my-2 py-3 rounded-md font-bold hover:bg-blue-700 ">Login</button>
+            <span class="text-center mt-2 mb-5 font-medium text-blue-500 cursor-pointer hover:underline">Forgot
+                Password?</span>
+            <hr>
+            <button class="mt-8 mb-2  py-3 bg-green-600 text-white font-bond text-xl rounded-lg hover:bg-green-700">New
+                Account</button>
+        </div>
+    </div>
+
 </body>
+
 </html>
