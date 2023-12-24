@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Ahsan Bashir</title>
+</head>
+<body class="bg-gray-200 p-8">
+
+  <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <label for="startNumber" class="block text-sm font-medium text-gray-600 mb-2">Enter starting number:</label>
+    <input type="number" id="startNumber" placeholder="Enter starting number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+
+    <label for="endNumber" class="block mt-4 text-sm font-medium text-gray-600 mb-2">Enter ending number:</label>
+    <input type="number" id="endNumber" placeholder="Enter ending number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+
+    <div class="mt-4 flex justify-between">
+      <button onclick="checkOddEven()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 w-1/2">Check Odd/Even</button>
+      <button onclick="resetForm()" class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 focus:outline-none focus:ring focus:border-gray-300 w-1/2">Cancel</button>
+    </div>
+
+    <div id="result" class="mt-4"></div>
+  </div>
+
+  <script>
+    function checkOddEven() {
+        
+      const startNumber = document.getElementById('startNumber').value;
+      const endNumber = document.getElementById('endNumber').value;
+      
+
+      if (!startNumber || !endNumber) {
+        document.getElementById('result').innerHTML = 'Please enter both numbers.';
+        return;
+      }
+
+      
+      if (parseInt(endNumber) <= parseInt(startNumber)) {
+        document.getElementById('result').innerHTML = 'Ending number must be greater than starting number.';
+        return;
+      }
+      
+
+      let resultMessage = '';
+      for (let i = parseInt(startNumber); i <= parseInt(endNumber); i++) {
+        resultMessage += `Number ${i} is ${i % 2 === 0 ? 'even' : 'odd'}<br>`;
+      }
+      
+
+      document.getElementById('result').innerHTML = resultMessage;
+    }
+
+    function resetForm() {
+        
+      document.getElementById('startNumber').value = '';
+      document.getElementById('endNumber').value = '';
+
+      
+      document.getElementById('result').innerHTML = '';
+    }
+  </script>
+
+</body>
+</html>

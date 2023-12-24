@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Bashir</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        
+        ::placeholder {
+            color: #a0aec0;
+            
+        }
+        
+        .image-container {
+            position: absolute;
+            right: 80px;
+            top: 80px;
+        }
+
+
+        input:focus {
+            border: 2px solid #00ff00;
+            
+            box-shadow: 0 0 10px #00ff00;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 p-8">
+    <div class="border-2 border-blue-500 m-5 p-5">
+        
+        <div class="mb-4 flex items-center">
+            <label class="block text-gray-700 text-sm font-bold mr-2" for="num1">
+                Enter Number 1:
+            </label>
+            <input
+                class="appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="num1" type="number" placeholder="Enter only Numeric Value">
+        </div>
+
+        <div class="mb-4 flex items-center">
+            <label class="block text-gray-700 text-sm font-bold mr-2" for="num2">
+                Enter Number 2:
+            </label>
+            <input
+                class="appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="num2" type="number" placeholder="Enter only Numeric Value">
+        </div>
+
+        <div class="mb-4 flex items-center">
+            <label class="block text-gray-700 text-sm font-bold mr-2" for="num3">
+                Enter Number 3 :
+            </label>
+            <input
+                class="appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="num3" type="number" placeholder="Enter only Numeric Value">
+        </div>
+
+        <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto block focus:outline-none focus:shadow-outline"
+            onclick="findSmallestNumber()">Find !
+        </button>
+
+        <div class="mt-4" id="result"></div>
+
+        <div class="flex mt-10 mr-48 image-container">
+            <img src="/src/Js.jpg" alt="Your Image" class="h-40 w-64 object-cover" />
+        </div>
+
+
+        <script>
+            function findSmallestNumber() {
+                
+                
+                const num1 = parseFloat(document.getElementById('num1').value);
+                const num2 = parseFloat(document.getElementById('num2').value);
+                const num3 = parseFloat(document.getElementById('num3').value);
+
+                
+                if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+                    
+                    if (num3 < num2) {
+                        
+                        const smallest = Math.min(num1, num2, num3);
+
+                        
+                        alert(`The smallest number is: ${smallest}`);
+                    } else {
+                        
+                        alert('Please make sure the third value is smaller than the second value');
+                    }
+                } else {
+                    
+                    alert('Please enter valid numeric values');
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

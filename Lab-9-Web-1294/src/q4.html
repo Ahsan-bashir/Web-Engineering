@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Ahsan Bashir</title>
+</head>
+<body class="bg-gray-200 p-8">
+
+  <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <label for="numberInput" class="block text-sm font-medium text-gray-600 mb-2">Enter a number (less than 1000):</label>
+    <input type="text" id="numberInput" placeholder="Enter a number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300" pattern="[0-9]+" maxlength="3">
+
+    <div class="mt-4">
+      <button onclick="checkPrime()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Check Prime</button>
+      <button onclick="clearResult()" class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 focus:outline-none focus:ring focus:border-gray-300">Clear Result</button>
+    </div>
+
+    <div id="result" class="mt-4"></div>
+  </div>
+
+  <script>
+    function checkPrime() {
+      const numberInput = document.getElementById('numberInput').value;
+
+      if (!numberInput) {
+        alert('Please enter a number.');
+        return;
+      }
+      
+      const numericValue = parseInt(numberInput);
+      if (isNaN(numericValue) || numericValue < 0 || numericValue >= 1000) {
+        alert('Please enter a valid number less than 1000.');
+        return;
+      }
+      
+      let isPrime = true;
+      for (let i = 2; i < numericValue; i++) {
+        if (numericValue % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      
+      const resultMessage = isPrime ? `${numericValue} is a prime number.` : `${numericValue} is not a prime number.`;
+      alert(resultMessage);
+    }
+
+    function clearResult() {
+      document.getElementById('numberInput').value = '';
+      document.getElementById('result').innerHTML = '';
+    }
+  </script>
+
+</body>
+</html>
